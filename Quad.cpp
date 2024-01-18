@@ -8,7 +8,11 @@ Quad::Quad()
 
 void Quad::initialise()
 {
-	float verts[] = { -1.0f, -1.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 1.0f, 1.0f, -1.0f, 1.0f, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f };
+	float verts[] = {
+		-1.0f, -1.0f, 0.0f, 1.0f,
+		-1.0f, 1.0f, 0.0f, 0.0f,
+		1.0f, -1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f, 0.0f };
 	glGenBuffers(1, &_VBO);
 	glBindBuffer(GL_ARRAY_BUFFER, _VBO);
 	glBufferData(GL_ARRAY_BUFFER, 16 * sizeof(float), verts, GL_STATIC_DRAW);
